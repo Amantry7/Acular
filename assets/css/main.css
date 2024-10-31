@@ -6275,6 +6275,9 @@ p.sticky-label {
 .footer-widgets-wrapper .single-footer-widget {
   margin-top: 30px;
 }
+.widget-head img {
+  width: 180px;
+}
 .footer-widgets-wrapper .single-footer-widget .widget-head {
   margin-bottom: 30px;
 }
