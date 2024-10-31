@@ -1632,6 +1632,9 @@ input.main-search-input::placeholder {
 .header-3 .header-main .sidebar__toggle {
   color: var(--header);
 }
+.header-logo img {
+  width: 179px;
+}
 .header-3 .header-left .logo .header-logo {
   display: none;
 }
