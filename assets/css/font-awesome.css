@@ -6,11 +6,19 @@
 
  
  @font-face {
-    font-family: "flaticon";
-    src: url("../fonts/flaticon.woff2?99e550548b06e1875834ead6e9e21850") format("woff2"),
-url("../fonts/flaticon.woff?99e550548b06e1875834ead6e9e21850") format("woff"),
-url("../fonts/flaticon.eot?99e550548b06e1875834ead6e9e21850#iefix") format("embedded-opentype")
+    font-family: 'Gilroy-ExtraBold';
+    src: url('/assets/fonts/Gilroy-ExtraBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'Gilroy-Light';
+    src: url('/assets/fonts/Gilroy-Light.otf') format('opentype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before, span[class^="flaticon-"]:before, span[class*=" flaticon-"]:before {
     font-family: flaticon !important;

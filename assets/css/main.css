@@ -167,7 +167,7 @@ Version: 1.0.0
     Template Default Fonts & Fonts Styles
  ---------------------------------------------- */
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Gilroy-Light', sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 28px;
@@ -1556,7 +1556,12 @@ input.main-search-input::placeholder {
     padding: 0 50px;
   }
 }
-
+@media (max-width: 991px) {
+  .loading-img img {
+    width: 130px;
+    height: 100px;
+  }
+}
 .header-top-wrapper-2 {
   display: flex;
   align-items: center;
@@ -6574,3 +6579,9 @@ p.sticky-label {
 .footer-contact-section.remove-bg::after {
   display: none;
 }/*# sourceMappingURL=main.css.map */
+
+.loading-img img {
+  width: 650px;
+  height: 350px;
+  margin-left: 5px;
+}
