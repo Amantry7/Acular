@@ -1,51 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-    <!--<< Header Area >>-->
-    <head>
-        <!-- ========== Meta Tags ========== -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Akular Company">
-        <meta name="description" content="Akular - инновационная компания в сфере солнечной энергетики, предлагающая решения для экологичного будущего.">
-        <meta property="og:title" content="Akular - Решения в сфере солнечной энергии">
-        <meta property="og:description" content="Инновационные технологии для экологичного и эффективного использования солнечной энергии. Присоединяйтесь к светлому будущему с Akular!">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://akular.tw1.ru/">
-        <meta property="og:image" content="https://akular.tw1.ru/assets/img/logo/logo.png">
-        <link href="https://fonts.googleapis.com/css2?family=Gilroy:wght@400;500;600&display=swap" rel="stylesheet">
+{% extends "include/homepage.html" %}
 
-        <!-- ======== Page title ============ -->
-        <title>Akular</title>
-        <!--<< Favicon >>-->
-        <link rel="shortcut icon" href="assets/img/favicon.svg">
-        <!--<< Bootstrap min.css >>-->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <!--<< Font Awesome.css >>-->
-        <link rel="stylesheet" href="assets/css/font-awesome.css">
-        <!--<< Animate.css >>-->
-        <link rel="stylesheet" href="assets/css/animate.css">
-        <!--<< Magnific Popup.css >>-->
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        <!--<< MeanMenu.css >>-->
-        <link rel="stylesheet" href="assets/css/meanmenu.css">
-        <!--<< Swiper Bundle.css >>-->
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-        <!--<< Nice Select.css >>-->
-        <link rel="stylesheet" href="assets/css/nice-select.css">
-        <!--<< Main.css >>-->
-        <link rel="stylesheet" href="assets/css/main.css">
-        <!--<< Style.css >>-->
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-
-    <body>
-
+{% load static %}
+{% block content %}
         <!-- Preloader Start -->
         <div id="preloader" class="preloader">
             <div class="animation-preloader">
                 <div class="loading-img">
-                    <img src="assets/img/logo/logo.png" alt="">
+                    <img src="{% static 'assets/img/logo/logo.png' %}" alt="">
                 </div>
                 <p class="text-center">Loading</p>
             </div>
@@ -86,7 +47,7 @@
                         <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                             <div class="offcanvas__logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo.png" alt="logo-img">
+                                    <img src="{% static 'assets/img/logo/logo.png' %}" alt="logo-img">
                                 </a>
                             </div>
                             <div class="offcanvas__close">
@@ -185,74 +146,7 @@
         </div>
 
         <!-- Header Section Start -->
-        <header id="header-sticky" class="header-1">
-            <div class="container-fluid">
-                <div class="mega-menu-wrapper">
-                    <div class="header-main">
-                        <div class="logo">
-                            <a href="index.html" class="header-logo">
-                                <img src="assets/img/logo/logo.png" alt="logo-img">
-                            </a>
-                        </div>
-                        <div class="header-left">
-                            <div class="mean__menu-wrapper">
-                                <div class="main-menu">
-                                    <nav id="mobile-menu">
-                                        <ul>
-                                            <li class="has-dropdown active menu-thumb">
-                                                <li>
-                                                    <a href="index.html">Главный</a>
-                                                </li>
-
-                                            </li>
-                                           
-                                            <li>
-                                                <a href="about.html">О нас</a>
-                                            </li>
-                                            <li>
-                                                <a href="service.html">Услуги</a>
-                                            </li>
-
-                                            <li class="has-dropdown">
-                                                <a href="news.html">
-                                                    Страницы
-                                                    <i class="fas fa-angle-down"></i>
-                                                </a>
-                                                <ul class="submenu">
-                                                    <li><a href="project.html">Проэкты</a></li>
-                                                      
-                                                    <li><a href="faq.html">Вопросы</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="news.html">Новости</a>
-                                            </li>
-                                            <li>
-                                                <a href="contact.html">Контакты</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="header-right d-flex justify-content-end align-items-center">
-                            <a href="#0" class="search-trigger search-icon"><i class="fal fa-search"></i></a>
-                            <div class="header-button">
-                                <a href="contact.html" class="theme-btn">
-                                    Свезатся <i class="far fa-long-arrow-right"></i>
-                                </a>
-                            </div>
-                            <div class="header__hamburger d-xl-none my-auto">
-                                <div class="sidebar__toggle">
-                                    <i class="fas fa-bars"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
+        {% include 'include/header.html'%}
         <!-- Search Area Start -->
         <div class="search-wrap">
             <div class="search-inner">
@@ -277,7 +171,7 @@
             <div class="swiper hero-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="hero-image bg-cover" style="background-image: url('assets/img/hero/01.jpg');"></div>
+                        <div class="hero-image bg-cover" style="background-image: url('{% static 'assets/img/hero/01.jpg' %}');"></div>
                         <div class="container">
                             <div class="row g-4">
                                 <div class="col-lg-8">
@@ -306,7 +200,7 @@
                     <div class="row g-5 align-items-center">
                         <div class="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
                             <div class="about-image">
-                                <img src="assets/img/about/01.jpg" alt="img">
+                                <img src="{% static 'assets/img/about/01.jpg' %}" alt="img">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -345,14 +239,14 @@
                                             </div>
                                             <div class="col-md-6 wow fadeInUp" data-wow-delay=".7s">
                                                 <div class="thumb">
-                                                    <img src="assets/img/about/technical-img.jpg" alt="img">
+                                                    <img src="{% static 'assets/img/about/technical-img.jpg' %}" alt="img">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="icon-area">
                                             <div class="icon-items wow fadeInUp" data-wow-delay=".3s">
                                                 <div class="icon">
-                                                    <img src="assets/img/about/icon/01.svg" alt="img">
+                                                    <img src="{% static 'assets/img/about/icon/01.svg' %}" alt="img">
                                                 </div>
                                                 <div class="content">
                                                     <h5>Будущее за цифровыми технологиями!</h5>
@@ -361,7 +255,7 @@
                                             </div>
                                             <div class="icon-items wow fadeInUp" data-wow-delay=".5s">
                                                 <div class="icon">
-                                                    <img src="assets/img/about/icon/02.svg" alt="img">
+                                                    <img src="{% static 'assets/img/about/icon/02.svg' %}" alt="img">
                                                 </div>
                                                 <div class="content">
                                                     <h5>Энергия данных и надежности!</h5>
@@ -382,14 +276,14 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="thumb">
-                                                    <img src="assets/img/about/technical-img.jpg" alt="">
+                                                    <img src="{% static 'assets/img/about/technical-img.jpg' %}" alt="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="icon-area">
                                             <div class="icon-items">
                                                 <div class="icon">
-                                                    <img src="assets/img/about/icon/01.svg" alt="img">
+                                                    <img src="{% static 'assets/img/about/icon/01.svg' %}" alt="img">
                                                 </div>
                                                 <div class="content">
                                                     <h5>Технологии для вашего будущего</h5>
@@ -398,7 +292,7 @@
                                             </div>
                                             <div class="icon-items">
                                                 <div class="icon">
-                                                    <img src="assets/img/about/icon/02.svg" alt="img">
+                                                    <img src="{% static 'assets/img/about/icon/02.svg' %}" alt="img">
                                                 </div>
                                                 <div class="content">
                                                     <h5>Инновации на службе экологии</h5>
@@ -419,14 +313,14 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="thumb">
-                                                    <img src="assets/img/about/technical-img.jpg" alt="">
+                                                    <img src="{% static 'assets/img/about/technical-img.jpg' %}" alt="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="icon-area">
                                             <div class="icon-items">
                                                 <div class="icon">
-                                                    <img src="assets/img/about/icon/01.svg" alt="img">
+                                                    <img src="{% static 'assets/img/about/icon/01.svg' %}" alt="img">
                                                 </div>
                                                 <div class="content">
                                                     <h5>Технологии для вашего будущего</h5>
@@ -435,7 +329,7 @@
                                             </div>
                                             <div class="icon-items">
                                                 <div class="icon">
-                                                    <img src="assets/img/about/icon/02.svg" alt="img">
+                                                    <img src="{% static 'assets/img/about/icon/02.svg' %}" alt="img">
                                                 </div>
                                                 <div class="content">
                                                     <h5>Технологии для вашего будущего</h5>
@@ -463,7 +357,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="service-card-items">
                             <div class="service-image">
-                                <img src="assets/img/service/01.jpg" alt="img">
+                                <img src="{% static 'assets/img/service/01.jpg' %}" alt="img">
                             </div>
                             <div class="service-content">
                                 <h3><a href="service-details.html">Солнечные панели</a></h3>
@@ -475,7 +369,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                         <div class="service-card-items">
                             <div class="service-image">
-                                <img src="assets/img/service/02.jpg" alt="img">
+                                <img src="{% static 'assets/img/service/02.jpg' %}" alt="img">
                             </div>
                             <div class="service-content">
                                 <h3><a href="service-details.html">Ветрогенераторы</a></h3>
@@ -487,7 +381,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
                         <div class="service-card-items">
                             <div class="service-image">
-                                <img src="assets/img/service/03.jpg" alt="img">
+                                <img src="{% static 'assets/img/service/03.jpg' %}" alt="img">
                             </div>
                             <div class="service-content">
                                 <h3><a href="service-details.html">Контроллеры зарядки</a></h3>
@@ -518,7 +412,7 @@
                         <div class="swiper-slide">
                             <div class="team-box-items">
                                 <div class="team-image">
-                                    <img src="assets/img/team/01.jpg" alt="img">
+                                    <img src="{% static 'assets/img/team/01.jpg' %}" alt="img">
                                     <div class="team-content">
                                         <p>Иван Петров</p>
                                         <h3><a href="team-details.html">Инженер по солнечным системам</a></h3>
@@ -538,7 +432,7 @@
                         <div class="swiper-slide">
                             <div class="team-box-items">
                                 <div class="team-image">
-                                    <img src="assets/img/team/02.jpg" alt="img">
+                                    <img src="{% static 'assets/img/team/02.jpg' %}" alt="img">
                                     <div class="team-content">
                                         <p>Алия Ким</p>
                                         <h3><a href="team-details.html">Эксперт по устойчивому развитию</a></h3>
@@ -558,7 +452,7 @@
                         <div class="swiper-slide">
                             <div class="team-box-items">
                                 <div class="team-image">
-                                    <img src="assets/img/team/03.jpg" alt="img">
+                                    <img src="{% static 'assets/img/team/03.jpg' %}" alt="img">
                                     <div class="team-content">
                                         <p>Дмитрий Смирнов</p>
                                         <h3><a href="team-details.html">Менеджер по установке солнечных панелей</a></h3>
@@ -581,12 +475,12 @@
         </section> -->
 
         <!-- Counter Section Start -->
-        <section class="counter-section fix section-padding bg-cover" style="background-image: url('assets/img/counter-bg.jpg');">
+        <section class="counter-section fix section-padding bg-cover" style="background-image: url('{% static 'assets/img/counter-bg.jpg' %}');">
             <div class="container">
                 <div class="counter-wrapper">
                     <div class="counter-items wow fadeInUp" data-wow-delay=".2s">
                         <div class="icon">
-                            <img src="assets/img/counter-icon/1.svg" alt="img">
+                            <img src="{% static 'assets/img/counter-icon/1.svg' %}" alt="img">
                         </div>
                         <div class="content">
                             <h2><span class="count">200</span>+</h2>
@@ -595,7 +489,7 @@
                     </div>
                     <div class="counter-items wow fadeInUp" data-wow-delay=".4s">
                         <div class="icon">
-                            <img src="assets/img/counter-icon/2.svg" alt="img">
+                            <img src="{% static 'assets/img/counter-icon/2.svg' %}" alt="img">
                         </div>
                         <div class="content">
                             <h2><span class="count">7010</span>+</h2>
@@ -604,7 +498,7 @@
                     </div>
                     <div class="counter-items wow fadeInUp" data-wow-delay=".6s">
                         <div class="icon">
-                            <img src="assets/img/counter-icon/3.svg" alt="img">
+                            <img src="{% static 'assets/img/counter-icon/3.svg' %}" alt="img">
                         </div>
                         <div class="content">
                             <h2><span class="count">900</span>+</h2>
@@ -613,7 +507,7 @@
                     </div>
                     <div class="counter-items wow fadeInUp" data-wow-delay=".8s">
                         <div class="icon">
-                            <img src="assets/img/counter-icon/4.svg" alt="img">
+                            <img src="{% static 'assets/img/counter-icon/4.svg' %}" alt="img">
                         </div>
                         <div class="content">
                             <h2><span class="count">6250</span>+</h2>
@@ -625,7 +519,7 @@
                     <div class="row g-0 align-items-center">
                         <div class="col-xl-7 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
                             <div class="contact-image">
-                                <img src="assets/img/contact.jpg" alt="img">
+                                <img src="{% static 'assets/img/contact.jpg' %}" alt="img">
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-6">
@@ -681,7 +575,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="project-card-items">
                             <div class="project-image">
-                                <img src="assets/img/project/01.jpg" alt="img">
+                                <img src="{% static 'assets/img/project/01.jpg' %}" alt="img">
                                 <div class="project-content">
                                     <p>Доставка</p>
                                     <h3><a href="project-details.html">Современный парк техники</a></h3>
@@ -692,7 +586,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                         <div class="project-card-items">
                             <div class="project-image">
-                                <img src="assets/img/project/02.jpg" alt="img">
+                                <img src="{% static 'assets/img/project/02.jpg' %}" alt="img">
                                 <div class="project-content">
                                     <p>Доставка</p>
                                     <h3><a href="project-details.html">Современные солнечные станции</a></h3>
@@ -703,7 +597,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
                         <div class="project-card-items">
                             <div class="project-image">
-                                <img src="assets/img/project/03.jpg" alt="img">
+                                <img src="{% static 'assets/img/project/03.jpg' %}" alt="img">
                                 <div class="project-content">
                                     <p>Доставка</p>
                                     <h3><a href="project-details.html">Монтаж солнечных систем</a></h3>
@@ -718,7 +612,7 @@
         <!-- Faq Section Start -->
         <section class="faq-section fix section-padding">
             <div class="faq-image">
-                <img src="assets/img/faq.jpg" alt="img">
+                <img src="{% static 'assets/img/faq.jpg' %}" alt="img">
             </div>
             <div class="container">
                 <div class="row">
@@ -777,7 +671,7 @@
         <!-- Testimonial Section Start -->
         <!-- <section class="testimonial-section fix section-padding">
             <div class="map-shape">
-                <img src="assets/img/testimonial/map-shape.png" alt="shape-img">
+                <img src="{% static 'assets/img/testimonial/map-shape.png' %}" alt="shape-img">
             </div>
             <div class="container">
                 <div class="section-title text-center">
@@ -788,7 +682,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="testimonial-card-items">
-                                <div class="client-img bg-cover" style="background-image: url('assets/img/testimonial/client-1.png');">
+                                <div class="client-img bg-cover" style="background-image: url('{% static 'assets/img/testimonial/client-1.png' %}');">
                                     <div class="icon">
                                         <i class="fas fa-quote-right"></i>
                                     </div>
@@ -804,7 +698,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="testimonial-card-items">
-                                <div class="client-img bg-cover" style="background-image: url('assets/img/testimonial/client-2.png');">
+                                <div class="client-img bg-cover" style="background-image: url('{% static 'assets/img/testimonial/client-2.png' %}');">
                                     <div class="icon">
                                         <i class="fas fa-quote-right"></i>
                                     </div>
@@ -820,7 +714,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="testimonial-card-items">
-                                <div class="client-img bg-cover" style="background-image: url('assets/img/testimonial/client-3.png');">
+                                <div class="client-img bg-cover" style="background-image: url('{% static 'assets/img/testimonial/client-3.png' %}');">
                                     <div class="icon">
                                         <i class="fas fa-quote-right"></i>
                                     </div>
@@ -898,8 +792,8 @@
                         <div class="swiper-slide">
                             <div class="news-card-items">
                                 <div class="news-image">
-                                    <img src="assets/img/news/01.jpg" alt="img">
-                                    <img src="assets/img/news/01.jpg" alt="img">
+                                    <img src="{% static 'assets/img/news/01.jpg' %}" alt="img">
+                                    <img src="{% static 'assets/img/news/01.jpg' %}" alt="img">
                                 </div>
                                 <div class="news-content">
                                     <div class="post-cat">
@@ -926,8 +820,8 @@
                         <div class="swiper-slide">
                             <div class="news-card-items">
                                 <div class="news-image">
-                                    <img src="assets/img/news/02.jpg" alt="img">
-                                    <img src="assets/img/news/03.jpg" alt="img">
+                                    <img src="{% static 'assets/img/news/02.jpg' %}" alt="img">
+                                    <img src="{% static 'assets/img/news/03.jpg' %}" alt="img">
                                 </div>
                                 <div class="news-content">
                                     <div class="post-cat">
@@ -954,8 +848,8 @@
                         <div class="swiper-slide">
                             <div class="news-card-items">
                                 <div class="news-image">
-                                    <img src="assets/img/news/03.jpg" alt="img">
-                                    <img src="assets/img/news/03.jpg" alt="img">
+                                    <img src="{% static 'assets/img/news/03.jpg' %}" alt="img">
+                                    <img src="{% static 'assets/img/news/03.jpg' %}" alt="img">
                                 </div>
                                 <div class="news-content">
                                     <div class="post-cat">
@@ -985,150 +879,5 @@
         </section>
 
         <!-- Footer Section Start -->
-        <footer class="footer-section footer-bg">
-            <div class="container">
-                <div class="footer-widgets-wrapper">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-4 col-md-6  wow fadeInUp" data-wow-delay=".2s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <a href="index.html">
-                                        <img src="assets/img/logo2-fotor-bg-remover-202410311706.png" alt="logo-img">
-                                    </a>
-                                </div>
-                                <div class="footer-content">
-                                    <p>
-                                        Akural — предоставляет доступные и высококачественные решения в сфере солнечной энергии, соответствующие мировым стандартам. Мы стремимся к инновациям, создавая экологичные технологии будущего.
-                                    </p>
-                                    <div class="social-icon d-flex align-items-center">
-                                        <a href="https://www.facebook.com/akural.kg"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-vimeo-v"></i></a>
-                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5  wow fadeInUp" data-wow-delay=".4s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <h4 class="text-white">Наша компания</h4>
-                                </div>
-                                <ul class="list-area">
-                                    <li><a href="service-details.html">Решения для солнечной энергетики</a></li>
-                                    <li><a href="service-details.html">Консалтинг в области устойчивого развития</a></li>
-                                    <li><a href="service-details.html">Инновации в зеленых технологиях</a></li>
-                                    <li><a href="service-details.html">Энергетическая эффективность</a></li>
-                                    <li><a href="service-details.html">Экологические технологии будущего</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5  wow fadeInUp" data-wow-delay=".6s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <h4 class="text-white">Меню</h4>
-                                </div>
-                                <ul class="list-area">
-                                    <li><a href="service.html">Услуги</a></li>
-                                    <li><a href="about.html">О нас</a></li>
-                                    
-                                    <li><a href="news.html">Новости</a></li>
-                                    <li><a href="contact.html">Контакты</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5  wow fadeInUp" data-wow-delay=".8s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <h4 class="text-white">Галерея</h4>
-                                </div>
-                                <div class="footer-gallery">
-                                    <div class="gallery-wrap">
-                                        <div class="gallery-item">
-                                            <div class="thumb">
-                                                <a href="assets/img/footer/gallery-1.jpg" class="img-popup">
-                                                    <img src="assets/img/footer/gallery-1.jpg" alt="gallery-img">
-                                                    <div class="icon">
-                                                        <i class="far fa-plus"></i>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="thumb">
-                                                <a href="assets/img/footer/gallery-2.jpg" class="img-popup">
-                                                    <img src="assets/img/footer/gallery-2.jpg" alt="gallery-img">
-                                                    <div class="icon">
-                                                        <i class="far fa-plus"></i>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="thumb">
-                                                <a href="assets/img/footer/gallery-3.jpg" class="img-popup">
-                                                    <img src="assets/img/footer/gallery-3.jpg" alt="gallery-img">
-                                                    <div class="icon">
-                                                        <i class="far fa-plus"></i>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="gallery-item">
-                                            <div class="thumb">
-                                                <a href="assets/img/footer/gallery-4.jpg" class="img-popup">
-                                                    <img src="assets/img/footer/gallery-4.jpg" alt="gallery-img">
-                                                    <div class="icon">
-                                                        <i class="far fa-plus"></i>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="thumb">
-                                                <a href="assets/img/footer/gallery-5.jpg" class="img-popup">
-                                                    <img src="assets/img/footer/gallery-5.jpg" alt="gallery-img">
-                                                    <div class="icon">
-                                                        <i class="far fa-plus"></i>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="thumb">
-                                                <a href="assets/img/footer/gallery-6.jpg" class="img-popup">
-                                                    <img src="assets/img/footer/gallery-6.jpg" alt="gallery-img">
-                                                    <div class="icon">
-                                                        <i class="far fa-plus"></i>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </footer>
-
-        <!--<< All JS Plugins >>-->
-        <script src="assets/js/jquery-3.7.1.min.js"></script>
-        <!--<< Viewport Js >>-->
-        <script src="assets/js/viewport.jquery.js"></script>
-        <!--<< Bootstrap Js >>-->
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <!--<< Nice Select Js >>-->
-        <script src="assets/js/jquery.nice-select.min.js"></script>
-        <!--<< Waypoints Js >>-->
-        <script src="assets/js/jquery.waypoints.js"></script>
-        <!--<< Counterup Js >>-->
-        <script src="assets/js/jquery.counterup.min.js"></script>
-        <!--<< Swiper Slider Js >>-->
-        <script src="assets/js/swiper-bundle.min.js"></script>
-        <!--<< Circle Progress Js >>-->
-        <script src="assets/js/circle-progress.js"></script>
-        <!--<< MeanMenu Js >>-->
-        <script src="assets/js/jquery.meanmenu.min.js"></script>
-        <!--<< Magnific Popup Js >>-->
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <!--<< Wow Animation Js >>-->
-        <script src="assets/js/wow.min.js"></script>
-        <!--<< Main.js >>-->
-        <script src="assets/js/main.js"></script>
-    </body>
-</html>
+        {% include 'include/footer.html'%}
+{% endblock %}
