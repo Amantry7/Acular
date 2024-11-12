@@ -450,13 +450,16 @@
 
     function loader() {
         $(window).on('load', function() {
-            // Animate loader off screen
-            $(".preloader").addClass('loaded');
-            $(".preloader").delay(600).fadeOut();
+            // Задержка на 5 секунд перед началом исчезновения прелоадера
+            setTimeout(function() {
+                // Добавляем класс loaded для анимации прелоадера
+                $(".preloader").addClass('loaded');
+                // Задержка и затем плавное исчезновение
+                $(".preloader").delay(600).fadeOut();
+            }, 3000); // Задержка 5 секунд
         });
     }
     loader();
 
     
 })(jQuery); // End jQuery
-

@@ -1360,7 +1360,7 @@ input.main-search-input::placeholder {
   font-weight: 600;
 }
 .header-top-wrapper .contact-list li a {
-  color: var(--header);
+  color: white
 }
 .header-top-wrapper .contact-list li i {
   color: var(--theme);
@@ -1368,7 +1368,7 @@ input.main-search-input::placeholder {
 }
 .header-top-wrapper .top-right {
   display: flex;
-  align-items: center;
+  align-items: centefvarr;
   gap: 30px;
 }
 .header-top-wrapper .top-right .social-icon {
@@ -6595,7 +6595,7 @@ p.sticky-label {
 }/*# sourceMappingURL=main.css.map */
 
 .loading-img img {
-  width: 650px;
-  height: 350px;
+  width: 750px;
+  height: 500px;
   margin-left: 5px;
 }
