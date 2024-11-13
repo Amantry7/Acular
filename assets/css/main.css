@@ -219,7 +219,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Krona One", system-ui;
+  font-family: "Gilroy-Light", system-ui;
   margin: 0px;
   padding: 0;
   color: var(--header);
@@ -326,7 +326,7 @@ p {
   }
 } */
 .preloader .animation-preloader .txt-loading {
-  font: bold 5em "Krona One", system-ui, "Lato", sans-serif;
+  font: bold 5em "Gilroy-Light", system-ui, "Lato", sans-serif;
   text-align: center;
   user-select: none;
 }
@@ -366,7 +366,7 @@ p {
   content: attr(data-text-preloader);
   left: 0;
   opacity: 0;
-  font-family: "Krona One", system-ui;
+  font-family: "Gilroy-Light", system-ui;
   position: absolute;
   top: -3px;
   transform: rotateY(-90deg);
@@ -2557,7 +2557,7 @@ input.main-search-input::placeholder {
 .feature-wrapper .feature-content .list li {
   font-size: 18px;
   color: var(--header);
-  font-family: "Krona One", system-ui;
+  font-family: "Gilroy-Light", system-ui;
 }
 @media (max-width: 767px) {
   .feature-wrapper .feature-content .list li {
@@ -2766,7 +2766,7 @@ input.main-search-input::placeholder {
   background-color: transparent;
   border: 2px solid var(--border);
   color: var(--theme);
-  font-family: "Krona One", system-ui;
+  font-family: "Gilroy-Light", system-ui;
 }
 .work-process-box-items .theme-btn::before {
   border-top: 35px solid var(--theme);
@@ -3244,7 +3244,7 @@ input.main-search-input::placeholder {
 .about-wrapper-3 .about-content .list-items ul li {
   font-size: 17px;
   color: var(--header);
-  font-family: "Krona One", system-ui;
+  font-family: "Gilroy-Light", system-ui;
 }
 @media (max-width: 767px) {
   .about-wrapper-3 .about-content .list-items ul li {
@@ -3768,7 +3768,7 @@ input.main-search-input::placeholder {
   font-size: 18px;
   color: var(--theme);
   font-weight: 400;
-  font-family: "Krona One", system-ui;
+  font-family: "Gilroy-Light", system-ui;
   margin-top: 25px;
   display: inline-block;
 }
@@ -3797,12 +3797,12 @@ input.main-search-input::placeholder {
 }
 .team-skill-wrapper .skills-content .progress-wrap .pro-items .pro-head .title {
   font-size: 16px;
-  font-family: "Krona One", system-ui;
+  font-family: "Gilroy-Light", system-ui;
 }
 .team-skill-wrapper .skills-content .progress-wrap .pro-items .pro-head .point {
   font-size: 14px;
   color: var(--header);
-  font-family: "Krona One", system-ui;
+  font-family: "Gilroy-Light", system-ui;
 }
 .team-skill-wrapper .skills-content .progress-wrap .pro-items .progress {
   background: var(--bg);
@@ -3856,7 +3856,7 @@ input.main-search-input::placeholder {
 }
 .team-skill-wrapper .others-Value-text ul li {
   color: var(--header);
-  font-family: "Krona One", system-ui;
+  font-family: "Gilroy-Light", system-ui;
   font-size: 12px;
 }
 .team-skill-wrapper .others-Value-text ul li:not(:last-child) {
@@ -4583,7 +4583,7 @@ input.main-search-input::placeholder {
 .project-details-wrapper .project-details-content .list-items span {
   display: inline-block;
   color: var(--header);
-  font-family: "Krona One", system-ui;
+  font-family: "Gilroy-Light", system-ui;
   margin-bottom: 10px;
 }
 .project-details-wrapper .project-details-content .list-items span i {
@@ -4761,7 +4761,7 @@ input.main-search-input::placeholder {
   background-color: transparent;
   border: 2px solid var(--border);
   border-radius: 5px;
-  font-family: "Krona One", system-ui;
+  font-family: "Gilroy-Light", system-ui;
   color: var(--header);
 }
 .news-section-2 .section-title-area .theme-btn::before {
@@ -4884,7 +4884,7 @@ input.main-search-input::placeholder {
   color: var(--white);
   font-size: 26px;
   line-height: 1.4;
-  font-family: "Krona One", system-ui;
+  font-family: "Gilroy-Light", system-ui;
   font-weight: 400;
   padding: 60px;
   text-align: center;
@@ -6037,7 +6037,7 @@ p.sticky-label {
 .service-details-wrapper .service-details-sidebar .sidebar-widget ul li {
   padding: 18px 20px;
   background-color: var(--bg);
-  font-family: "Krona One", system-ui;
+  font-family: "Gilroy-Light", system-ui;
   background-color: var(--white);
   transition: all 0.4s ease-in-out;
 }
@@ -6607,7 +6607,7 @@ p.sticky-label {
 }
 .footer-contact-wrapper .contact-items .content p, .footer-contact-wrapper .contact-items .content a {
   color: var(--white);
-  font-family: "Krona One", system-ui;
+  font-family: "Gilroy-Light", system-ui;
 }
 
 .footer-contact-section {
