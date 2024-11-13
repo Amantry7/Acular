@@ -46,12 +46,12 @@ Version: 1.0.0
   outline: none !important;
   background-color: var(--theme);
   color: var(--white);
+  transition: background-color 0.3s ease; 
   font-size: 16px;
   font-weight: 500;
   border-radius: 0;
   letter-spacing: 0;
   padding: 14px 40px;
-  transition: 500ms;
   text-transform: capitalize;
   position: relative;
   overflow: hidden;
@@ -90,7 +90,8 @@ Version: 1.0.0
   z-index: -1;
 }
 .theme-btn:hover {
-  color: var(--white);
+  background-color: var(--theme-2); /* Цвет кнопки при наведении * /* Новый цвет при наведении */
+  color: var(--header)
 }
 .theme-btn:hover::before {
   transform: translateX(-20%);
@@ -115,6 +116,9 @@ Version: 1.0.0
 .theme-btn.bg-color:hover {
   color: var(--header);
 }
+.theme-btn::before, .theme-btn::after {
+  display: none;
+}
 @media (max-width: 767px) {
   .theme-btn {
     padding: 16px 32px;
@@ -125,7 +129,9 @@ Version: 1.0.0
     padding: 14px 30px;
   }
 }
-
+.theme-btn {
+  border-radius: 20px;
+}
 .link-btn {
   text-transform: capitalize;
   color: var(--header);
