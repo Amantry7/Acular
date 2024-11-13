@@ -310,7 +310,7 @@ p {
   z-index: 1000;
 }
 .preloader .animation-preloader .spinner {
-  animation: spinner 1s infinite linear;
+  /* animation: spinner 1s infinite linear; */
   border-radius: 50%;
   border: 3px solid rgba(0, 0, 0, 0.2);
   border-top-color: var(--theme);
@@ -318,13 +318,13 @@ p {
   margin: 0 auto 3.5em auto;
   width: 9em;
 }
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .preloader .animation-preloader .spinner {
     width: 7.5em;
     height: 7.5em;
     margin: 0 auto 1.5em auto;
   }
-}
+} */
 .preloader .animation-preloader .txt-loading {
   font: bold 5em "Krona One", system-ui, "Lato", sans-serif;
   text-align: center;
@@ -335,33 +335,33 @@ p {
     font-size: 2.5em;
   }
 }
-.preloader .animation-preloader .txt-loading .letters-loading {
+/* .preloader .animation-preloader .txt-loading .letters-loading {
   color: var(--theme);
   position: relative;
-}
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
-  animation-delay: 0.2s;
-}
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
+/* } */
+/* .preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
+  animation-delay: 0.2s; */
+} */
+/* .preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
   animation-delay: 0.4s;
-}
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
+} */
+/* .preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
   animation-delay: 0.6s;
-}
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
+} */
+/* .preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
   animation-delay: 0.8s;
-}
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
+} */
+/* .preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
   animation-delay: 1s;
-}
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
+} */
+/* .preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
   animation-delay: 1.2s;
-}
-.preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before {
+} */
+/* .preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before {
   animation-delay: 1.4s;
-}
+} */
 .preloader .animation-preloader .txt-loading .letters-loading::before {
-  animation: letters-loading 4s infinite;
+  /* animation: letters-loading 4s infinite; */
   color: var(--header);
   content: attr(data-text-preloader);
   left: 0;
@@ -405,9 +405,56 @@ p {
   opacity: 0;
   transition: 0.3s ease-out;
 }
-.preloader.loaded .loader-section .bg {
+/* .preloader.loaded .loader-section .bg {
   width: 0;
   transition: 0.7s 0.3s allcubic-bezier(0.1, 0.1, 0.1, 1);
+} */
+/* Анимация для появления (fade-in) */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Анимация для исчезновения (fade-out) */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Стили для прелоадера */
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff; /* Цвет фона, можно изменить */
+  z-index: 999999;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Класс для запуска fade-out анимации */
+.preloader.loaded {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+/* Опционально: стили для текста или логотипа */
+.preloader .animation-preloader {
+  opacity: 1;
+  transition: opacity 1s ease;
 }
 
 .search-wrap {
@@ -727,19 +774,19 @@ input.main-search-input::placeholder {
   -webkit-animation: rotate 40s linear infinite;
   animation: rotate 40s linear infinite;
 }
-
+/* 
 @-webkit-keyframes spinner {
   to {
     -webkit-transform: rotateZ(360deg);
     transform: rotateZ(360deg);
-  }
-}
-@keyframes spinner {
+  } */
+/* } */
+/* @keyframes spinner {
   to {
     -webkit-transform: rotateZ(360deg);
     transform: rotateZ(360deg);
   }
-}
+} */
 @-webkit-keyframes letters-loading {
   0%, 75%, 100% {
     opacity: 0;
@@ -1572,8 +1619,8 @@ input.main-search-input::placeholder {
 }
 @media (max-width: 991px) {
   .loading-img img {
-    width: 130px;
-    height: 100px;
+    width: 100px;
+    height: 70px;
   }
 }
 .header-top-wrapper-2 {
@@ -1652,7 +1699,7 @@ input.main-search-input::placeholder {
   color: var(--header);
 }
 .header-logo img {
-  width: 179px;
+  width: 150px;
 }
 .header-3 .header-left .logo .header-logo {
   display: none;
@@ -2237,6 +2284,9 @@ input.main-search-input::placeholder {
     margin-top: 20px;
     justify-content: center;
   }
+}
+.hero-button a {
+  border-radius: 20px;
 }
 .hero-1.hero-2 {
   padding: 200px 0;
@@ -6595,7 +6645,11 @@ p.sticky-label {
 }/*# sourceMappingURL=main.css.map */
 
 .loading-img img {
-  width: 750px;
-  height: 500px;
+  width: 500px;
+  height: 300px;
   margin-left: 5px;
+}
+
+.header-button a { 
+  border-radius: 10px;
 }
