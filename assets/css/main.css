@@ -27,7 +27,6 @@ Version: 1.0.0
   --black: #000;
   --white: #fff;
   --theme: #233469;
-  --theme-2: #3E60AA;
   --theme-3: #00baa3;
   --header: #1F242C;
   --base: #5C30FD;
@@ -39,25 +38,35 @@ Version: 1.0.0
   ---box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.06);
 }
 
+
 .theme-btn {
   display: inline-block;
   vertical-align: middle;
   border: none;
   outline: none !important;
-  background-color: var(--theme);
-  color: var(--white);
-  transition: background-color 0.3s ease; 
+  background-color: var(--theme); /* основной цвет кнопки */
+  color: var(--white); /* цвет текста */
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 16px;
   font-weight: 500;
-  border-radius: 0;
-  letter-spacing: 0;
+  border-radius: 8px; /* скругленные углы */
   padding: 14px 40px;
   text-transform: capitalize;
   position: relative;
   overflow: hidden;
   text-align: center;
-  z-index: 9;
+  z-index: 1;
 }
+
+.theme-btn:hover {
+  background-color: var(--white); /* фон при наведении */
+  color: var(--theme); /* цвет текста при наведении */
+}
+
+.theme-btn i {
+  margin-left: 5px;
+}
+
 .theme-btn i {
   margin-left: 5px;
 }
@@ -90,8 +99,8 @@ Version: 1.0.0
   z-index: -1;
 }
 .theme-btn:hover {
-  background-color: var(--theme-2); /* Цвет кнопки при наведении * /* Новый цвет при наведении */
-  color: var(--header)
+  background-color: var(--theme-2); /* Цвет фона при наведении */
+  color: var(--header); /* Цвет текста при наведении */
 }
 .theme-btn:hover::before {
   transform: translateX(-20%);
@@ -101,21 +110,44 @@ Version: 1.0.0
 }
 .theme-btn.theme-color-2 {
   background-color: var(--theme-2);
+  color: var(--white); /* Цвет текста */
+  transition: background-color 0.3s ease, color 0.3s ease;
+} 
+.theme-btn.theme-color-2:hover {
+  background-color: white; /* Новый цвет фона при наведении */
+  color: var(--theme-2); /* Новый цвет текста при наведении */
+} 
+/* Убираем анимации ::before и ::after для класса .theme-color-2 */
+.theme-btn.theme-color-2::before,
+.theme-btn.theme-color-2::after {
+  display: none;
 }
 .theme-btn.bg-color {
-  background-color: #333F4D;
+  background-color: white;
+  color: #3E60AA;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход для обоих свойств */
 }
+
+.theme-btn.bg-color:hover {
+  background-color: #3E60AA; /* Цвет фона при наведении */
+  color: white; /* Цвет текста при наведении */
+}
+
 .theme-btn.bg-color::before {
   border-top: 35px solid var(--white);
   border-bottom: 35px solid var(--white);
+} 
+
+.theme-btn.bg-color::before,
+.theme-btn.bg-color::after {
+  display: none;
 }
+
 .theme-btn.bg-color::after {
   border-top: 35px solid var(--white);
   border-bottom: 35px solid var(--white);
 }
-.theme-btn.bg-color:hover {
-  color: var(--header);
-}
+
 .theme-btn::before, .theme-btn::after {
   display: none;
 }
@@ -130,7 +162,7 @@ Version: 1.0.0
   }
 }
 .theme-btn {
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .link-btn {
   text-transform: capitalize;
@@ -1568,9 +1600,22 @@ input.main-search-input::placeholder {
     gap: 25px;
   }
 }
-.header-2 .header-main .header-right .header-button .theme-btn {
+.header-2 .header-main .header-right .header-button .theme-btn,
+.header-3 .header-right .header-button .theme-btn {
   padding: 16px 30px;
-  background-color: var(--theme);
+  background-color: var(--theme); /* Основной цвет фона */
+  color: var(--white); /* Основной цвет текста */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход цвета */
+  text-align: center;
+}
+.header-2 .header-main .header-right .header-button .theme-btn:hover,
+.header-3 .header-right .header-button .theme-btn:hover {
+  background-color: var(--white); /* Цвет фона при наведении */
+  color: var(--theme); /* Цвет текста при наведении */
+} 
+.header-3 .header-right .header-button .theme-btn::before,
+.header-3 .header-right .header-button .theme-btn::after {
+  display: none;
 }
 @media (max-width: 1899px) {
   .header-2 .header-main .header-right .header-button {
@@ -1743,6 +1788,8 @@ input.main-search-input::placeholder {
 .header-3 .header-right .header-button .theme-btn:hover {
   color: var(--white);
 }
+
+
 
 .sticky {
   position: fixed !important;
@@ -2226,7 +2273,7 @@ input.main-search-input::placeholder {
   width: 100%;
   height: 100%;
   content: "";
-  background: linear-gradient(90deg, rgba(37, 68, 150, 0.88) 33.64%, rgba(37, 68, 150, 0.88) 41.74%, rgba(255, 255, 255, 0) 59.42%);
+  background: linear-gradient(90deg, rgba(37, 68, 150, 0.9) 20%, rgba(37, 68, 150, 0.6) 50%, rgba(37, 68, 150, 0.3) 80%, rgba(255, 255, 255, 0) 100%);
   z-index: -1;
 }
 .hero-1 .hero-content {
@@ -2292,7 +2339,7 @@ input.main-search-input::placeholder {
   }
 }
 .hero-button a {
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .hero-1.hero-2 {
   padding: 200px 0;
